@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fffff0;
+    overflow: hidden;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* 100% of the browser window's height, regardless of how much content is inside.*/
+}
+
+h1 {
+    color: #771010;
+}
+
+h2 {
+    color: #069185;
+    font-size: 2rem;
+}
+
+h3 {
+    color: #649418;
+}
+
+
+.card {
+    padding: 1.5rem;
+    border: 2px solid rgb(124, 110, 63);
+    border-radius: 3px;
+    background-color: rgb(211, 199, 144);
+    display: flex;
+    flex-direction: column;
+    /* stacks h1 and p vertically */
+    margin: 2rem auto;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 700px;
+    height: 400px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: #312303;
+    z-index: 10;
+}
+
+.card-action {
+    cursor: pointer;
+    background: none;
+    border: none;
+    font: inherit;
+    color: #312303;
+    text-decoration: none;
+    margin-top: 2rem;
+}
+
+.card-action:hover,
+.card-action:focus {
+    color: #fdeead;
+    transform: scale(1.05);
+    outline: none;
+    transition: transform 0.2s ease;
+}
+
+.card-action:focus {
+    box-shadow: 0 0 0 2px #fdeda7;
+    border-radius: 3px;
+}
+
+.hidden {
+    display: none;
+}
+
+#balloon-container {
+    position: absolute;
+    /* makes the container float over the page without taking up space in the normal layout flow */
+    top: 0;
+    /* top and left 0 - anchors the container to the top-left of the screen */
+    left: 0;
+    width: 100%;
+    /* width and height covers the whole screen, like an invisible blanket over the body */
+    height: 100%;
+    pointer-events: none;
+    /* invisible to mouse clicks */
+    /* allows clicks to pass through (what does this mean?) - this element and its children won't block mouse clicks - so even if a balloon floats over your button or card, you can still click it */
+    overflow: hidden;
+    /* keeps floating balloons from spilling outside the screen */
+    z-index: 1;
+    /* below the card */
+}
+
+.balloon {
+    position: absolute;
+    /* places each balloon at an exact location on screen (set with left in js) */
+    bottom: -100px;
+    /* starts the balloon off-screen below */
+    width: 30px;
+    /* width and height define balloon size*/
+    height: 40px;
+    border-radius: 50% 50% 45% 45%;
+    /* creates an oval/egg shape instead of a circle */
+    background-color: red;
+    /* gets overwritten by js with a random color */
+    animation: floatUp 5s ease-in infinite;
+    /* starts the keyframe animation called floatUp, which lasts 5 seconds and repeats forever */
+    opacity: 0.8;
+}
+
+@keyframes floatUp {
+
+    /* keyframes are like cartoon frames: they define how an element changes over time */
+    0% {
+        /* start of animation */
+        transform: translateY(0) scale(1);
+        /* no movement, normal size*/
+        opacity: 0.8;
+    }
+
+    80% {
+        opacity: 0.8;
+    }
+
+    100% {
+        /* end of animation */
+        transform: translateY(-120vh) scale(1.1);
+        opacity: 0;
+        /* starts fully visible and slowly fades out as it floats up */
+        /* negative Y moves up, positive down, css origin point is top-left corner thats why! */
+        /* floats upward off-screen -120% of viewport height, grows slightly in size for a floaty balloon illusion */
+    }
+}

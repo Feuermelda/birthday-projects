@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="a Virtual Birthday Card for my Birthday" />
+    <title>Virtual Birthday Card</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <header>
+        <div class="card" id=bdaycard>
+            <div class="card-front">
+                <h1>Happy Birthday!</h1>
+                <button class="card-action">[ Click to Open Card ]</button>
+            </div>
+            <div class="card-inside hidden">
+                <h2>Dear Melda,</h2>
+                <h3>You're 24 years now!</h3>
+                <p>That means you're closer to 30 than 18.</p>
+                <p>Anyway, Milk and Eel wish you only the Best!</p>
+                <p>May this year bring you as much joy as the last (or even more)!</p>
+            </div>
+        </div>
+
+    </header>
+    <audio id="bday-audio" src="Happy_Birthday.mp3" preload="auto"></audio>
+    <div id="balloon-container">
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
