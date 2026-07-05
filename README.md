@@ -4,7 +4,7 @@ Welcome to my **Birthday Projects** repository!<br>
 This year, I wanted to celebrate my birthday by building something silly, sweet, and often a little chaotic with code.<br>
 I hope there are many future years to come with more silly birthday projects.
 
-## 2025
+## **2025**
 A collection of mini-projects made to celebrate my 24th birthday.
 
 ### Contents
@@ -13,31 +13,69 @@ A collection of mini-projects made to celebrate my 24th birthday.
 - [`birthday-bash/`](./2025/birthday-bash) - A terminal-based celebration with a delicious ASCII cake
 - [`birthday-web-app/`](./2025/birthday-web-app) - An interactive virtual birthday card built with HTML, CSS & JS
 
-## How to Run
+### How to Run
 
 Each project lives in its own folder. Here is a quick guide:
 
-### `bday-virus/`
+#### `bday-virus/`
 - Language: Python 3.x
 - No external libraries required
 
-### `birthday-bash/`
+#### `birthday-bash/`
 - Language: Bash
 - Run with a Unix-like terminal:
 - ```bash
     bash birthday.sh
     ```
 
-### `birthday-web-app/`
+#### `birthday-web-app/`
 - Just open index.html in your browser!
 
-## Requirements
+### Requirements
 - Python 3.x for `bday-virus`
 - A Unix shell (e.g. Bash) for `birthday-bash`
 - A modern browser for `birthday-web-app`
 - Optional: Requires audio output support (e.g. system player like `afplay`, `aplay`, or `wmplayer`) to hear the birthday melody
 
-## Disclaimer
+### Disclaimer
 
 These scripts are made for fun and learning purposes only. The `bday-virus` is non-malicious and does not replicate outside its own folder or harm your system in any way.<br>
 The `birthday-web-app` project was assisted by ChatGPT for balloon magic and advanced JS support.
+
+---
+
+## **2026**
+A collection of mini-projects made to celebrate my 25th birthday.
+This year's theme became a tiny retro media archive: save files, gifts, fortunes, and spinning tapes.
+
+### Contents
+
+- `birthday-fortune-cs/` - A C# birthday checker that gives presents and a fortune if today is your birthday
+- `floppy-disk-3d/` - A 3D printable chunky floppy disk keepsake box labeled `MELDA.SAV`
+- `cassette-gif/` - A pixel art animated cassette tape GIF with spinning reels and moving tape
+
+### How to Run / View
+
+#### `birthday-fortune-cs/`
+
+- Language: C#
+- Run with:
+
+```bash
+dotnet run
+```
+
+#### `floppy-disk-3d/`
+- Contains STL files for 3D printing
+- Requires 6 x 2mm magnets for assembly
+- Print, glue magnets carefully, and use as a tiny birthday time capsule
+
+#### `cassette-gif/`
+- Open the GIF file in a browser or image viewer
+- Source file can be edited in GIMP
+![Cassette Animation](2026/cassette-gif/cassette.gif)
+
+### Requirements
+- .NET SDK for `birthday-fortune-cs`
+- A 3D printer for `floppy-disk-3d`
+- GIMP or any image viewer for `cassette-gif`
